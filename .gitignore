@@ -1,0 +1,6 @@
+*.DS_Store
+parser
+*.o
+semantic
+syntaxTree
+*.pyc

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+    <a name="top" ></a>
+    <div class="list-style">
+        <ul>
+        {% for line in cnExplain %}
+            <li>{{ line }}</li>
+        {% endfor %}
+        </ul>
+        <hr/>
+        <ul>
+        {% for line in grammar %}
+            <li>{{ line }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+    <center><a href="#top"> 返回顶部 </a></center>
+{% endblock %}

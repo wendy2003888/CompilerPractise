@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <a name="top" ></a>
+    <div class="list-style">
+        <h6>Result:</h6>
+        <pre id="result">
+        {% for line in result %}
+            {{ line }}
+        {% endfor %}
+        </pre>
+    </div>
+    <hr/>
+        <h6>Code</h6>
+        <pre id="result">
+        {% for line in codes %}
+            {{ line[0] }}&#009;{{ line[1] }} 
+        {% endfor %}
+        </pre>
+       
+    <center><a href="#top"> 返回顶部 </a></center>
+{% endblock %}

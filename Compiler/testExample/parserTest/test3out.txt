@@ -1,0 +1,26 @@
+LR1 Table : 
+	Action						GOTO
+	(	)	*	+	num	#	E	P	S	T	
+0	S5	F	F	F	S6	F	2	4	1	3	
+1	F	F	F	F	F	A	-1	-1	-1	-1	
+2	F	F	F	S7	F	r1	-1	-1	-1	-1	
+3	F	F	S8	r2	F	r2	-1	-1	-1	-1	
+4	F	F	r4	r4	F	r4	-1	-1	-1	-1	
+5	S12	F	F	F	S13	F	9	11	-1	10	
+6	F	F	r6	r6	F	r6	-1	-1	-1	-1	
+7	S5	F	F	F	S6	F	-1	4	-1	14	
+8	S5	F	F	F	S6	F	-1	15	-1	-1	
+9	F	S17	F	S16	F	F	-1	-1	-1	-1	
+10	F	r2	S18	r2	F	F	-1	-1	-1	-1	
+11	F	r4	r4	r4	F	F	-1	-1	-1	-1	
+12	S12	F	F	F	S13	F	19	11	-1	10	
+13	F	r6	r6	r6	F	F	-1	-1	-1	-1	
+14	F	F	S8	r3	F	r3	-1	-1	-1	-1	
+15	F	F	r5	r5	F	r5	-1	-1	-1	-1	
+16	S12	F	F	F	S13	F	-1	11	-1	20	
+17	F	F	r7	r7	F	r7	-1	-1	-1	-1	
+18	S12	F	F	F	S13	F	-1	21	-1	-1	
+19	F	S22	F	S16	F	F	-1	-1	-1	-1	
+20	F	r3	S18	r3	F	F	-1	-1	-1	-1	
+21	F	r5	r5	r5	F	F	-1	-1	-1	-1	
+22	F	r7	r7	r7	F	F	-1	-1	-1	-1	

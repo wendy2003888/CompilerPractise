@@ -1,0 +1,16 @@
+First : 
+$ : # void 
+A : id 
+B : id 
+C : id 
+D : type 
+E : ( id num 
+F : ( id num 
+F1 : id 
+F2 : for id if while { } 
+FR : for 
+L : # for id if while { 
+M : # void 
+P : type 
+S : for id if while { 
+T : ( id num 

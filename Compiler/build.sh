@@ -1,0 +1,2 @@
+g++ -c -o lexer.o lexer.cpp && g++ -c -o syntaxTree.o syntaxTree.cpp && g++ -c -o parser.o parser.cpp 
+g++ -c -o semantic.o semantic.cpp && g++ -c -o main.o main.cpp && g++ -o main main.o lexer.o syntaxTree.o parser.o semantic.o

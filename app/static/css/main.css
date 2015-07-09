@@ -1,0 +1,135 @@
+#wrapper {
+    position: relative;
+    width: 80%;
+    top: 20px;
+    margin: 0 auto;
+}
+
+#word li
+{
+  display:inline;
+  padding:10px;
+}
+
+.container {
+    margin: 0 auto;
+
+}
+.form-group {
+    margin:0 auto;
+    width: 80%;
+}
+.print-content-form {
+
+}
+.print-content-form span {
+    display: block;
+}
+.code-add-form {
+    margin: 0 auto
+}
+.code-add-text {
+    width: 80%;
+    height:60%;
+    border-radius: 6px;
+}
+.print-content-text {
+    width: 90%;
+    overflow-y:visible;
+}
+
+.label{
+    display: inline-block;
+    width: 200px;
+}
+
+li {
+    list-style-type: none;
+    font-size: 13px;
+}
+
+.tl {
+    text-align: left;
+}
+.tr {
+    text-align: right;
+}
+.tc {
+    text-align: center;
+}
+.pa {
+    position: absolute;
+}
+.pr {
+    position: relative;
+}
+
+.list-style {
+    padding: 15px;
+}
+thead {
+    display: table-header-group;
+}
+
+button{
+  margin-bottom: 10px;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 5px;
+  line-height: 1.5;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+  font-size: 15px;
+}
+.table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+}
+
+.color{
+  width: 30%;
+}
+
+.lay-left{
+  width: 45%;
+  float: left;
+}
+
+.lay-right{
+  width: 50%;
+  float: right;
+}
+
+#lr1table {
+  margin-top: 2px;
+  width: 100%;
+  padding-top: 5px; 
+  padding-bottom: 5px;
+  border: 1px;
+  font-size: 10px;
+  line-height: 8px;
+}
+
+#actionTB {
+  width: 120%;
+  padding-top: 5px; 
+  padding-bottom: 5px;
+  border: 1px;
+  font-size: 10px;
+  line-height: 8px;
+}
+#result {
+  margin-top: 2px;
+  width: 100%;
+  padding-top: 5px; 
+  padding-bottom: 5px;
+  border: 1px;
+  font-size: 10px;
+  line-height: 5px;
+}

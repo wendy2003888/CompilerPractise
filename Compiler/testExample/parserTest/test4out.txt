@@ -1,0 +1,17 @@
+LR1 Table : 
+	Action				GOTO
+	a	b	d	#	A	D	S	
+0	S3	F	r4	r2	2	-1	1	
+1	F	F	F	A	-1	-1	-1	
+2	F	F	S4	F	-1	-1	-1	
+3	S3	F	r4	F	5	-1	-1	
+4	F	S7	r7	r7	-1	6	-1	
+5	F	F	S8	F	-1	-1	-1	
+6	F	F	S9	r1	-1	-1	-1	
+7	F	F	r6	r6	-1	-1	-1	
+8	F	F	r3	F	-1	-1	-1	
+9	S10	F	r4	r4	11	-1	-1	
+10	S3	F	r4	F	12	-1	-1	
+11	F	F	r5	r5	-1	-1	-1	
+12	F	F	S13	F	-1	-1	-1	
+13	F	F	r3	r3	-1	-1	-1	

@@ -1,0 +1,14 @@
+M->void main ( ) { P return ; }
+P->D S
+D->D type id ; | type id ;
+S->A | { L } | if ( B ) { L } else { L } | if ( B ) { L } | while ( B ) { L } | FR
+FR->for ( A ; B ; F1 F2
+F1->A ) {
+F2->L }
+A->id = E
+L->S ; L | S | #
+B->B rel C | C
+C->id cmp id | id cmp num | id
+E->T | E + T | E - T
+T->F | T * F | T / F
+F->num | id | ( E )

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    <a name="top" ></a>
+    <div class="list-style">
+        <table class="table" style="margin: 0 auto">
+            <thead>
+                <tr>
+                    <th> 助记符 </th>
+                    <th> 单词符号 </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for word_pair in words %}
+                <tr>
+                    <td> {{ word_pair[0] }} </td>
+                    <td> {{ word_pair[1] }} </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <center><a href="#top"> 返回顶部 </a></center>
+{% endblock %}

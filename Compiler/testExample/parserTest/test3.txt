@@ -1,0 +1,5 @@
+S->E
+E->T | E + T
+T->P | T * P
+P->num
+P->( E )

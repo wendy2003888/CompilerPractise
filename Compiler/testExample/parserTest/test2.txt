@@ -1,0 +1,4 @@
+S->S ; A
+S->A
+A->E | id := E
+E->E + id | id

@@ -1,0 +1,18 @@
+非终结符集合 : A B C D E F F1 F2 FR L M P S T 
+终结符集合 : ( ) * + - / ; = cmp else for id if main num rel return type void while { } 
+<主程序 M >     -> void main ( ) { <子程序 P > return ; }
+<子程序 P >     -> <声明 D > <语句 S >
+<声明 D >       -> <声明 D > type id ; | type id ;
+<语句 S >       -> <赋值语句 A > | { <语句序列 L > }
+<语句 S >       -> if ( <布尔表达式 B > ) { L } else { L } | if ( <布尔表达式 B > ) { <语句序列 L > }
+<语句 S >       -> while ( <布尔表达式 B > ) { L } | FR
+<for语句 FR >   -> for ( <赋值语句 A > ; <布尔表达式 B > ; < F1 > < F2 >
+<F1>           -> <赋值语句 A > ) {
+<F2>           -> <语句序列 L > }
+<赋值语句 A >    -> id = <表达式 E >
+<语句序列 L >    -> <语句 S > ; <语句序列 L > | <语句 S > | 空
+<布尔表达式 B >   -> <布尔表达式 B > rel <比较表达式 C > | <比较表达式 C >
+<比较表达式 C >   -> id cmp id | id cmp num | id
+<表达式 E >      -> <项 T > | <表达式 E > + <项 T > | <表达式 E > - <项 T >
+<项 T >         -> <因子 F > | <项 T > * <因子 F > | <项 T > / <因子 F >
+<因子 F >       -> num | id | ( <表达式 E > )

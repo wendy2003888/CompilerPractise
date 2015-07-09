@@ -1,0 +1,7 @@
+S->A d D
+S->#
+A->a A d
+A->#
+D->D d A
+D->b
+D->#

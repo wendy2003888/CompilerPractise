@@ -1,0 +1,7 @@
+LR1 Table : 
+	Action		GOTO
+	a	#	A	S	
+0	S3	r3	2	1	
+1	F	A	-1	-1	
+2	F	r1	-1	-1	
+3	F	r2	-1	-1	

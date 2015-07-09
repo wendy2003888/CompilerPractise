@@ -1,0 +1,1914 @@
+closure:
+0 : 
+$ -> @M , #
+M -> @void main ( ) { P return ; } , #
+1 : 
+$ -> M @, #
+2 : 
+M -> void @main ( ) { P return ; } , #
+3 : 
+M -> void main @( ) { P return ; } , #
+4 : 
+M -> void main ( @) { P return ; } , #
+5 : 
+M -> void main ( ) @{ P return ; } , #
+6 : 
+M -> void main ( ) { @P return ; } , #
+P -> @D S , return
+D -> @D type id ; , for
+D -> @D type id ; , id
+D -> @D type id ; , if
+D -> @D type id ; , type
+D -> @D type id ; , while
+D -> @D type id ; , {
+D -> @type id ; , for
+D -> @type id ; , id
+D -> @type id ; , if
+D -> @type id ; , type
+D -> @type id ; , while
+D -> @type id ; , {
+7 : 
+M -> void main ( ) { P @return ; } , #
+8 : 
+P -> D @S , return
+D -> D @type id ; , for
+D -> D @type id ; , id
+D -> D @type id ; , if
+D -> D @type id ; , type
+D -> D @type id ; , while
+D -> D @type id ; , {
+S -> @A , return
+S -> @FR , return
+S -> @if ( B ) { L } , return
+S -> @if ( B ) { L } else { L } , return
+S -> @while ( B ) { L } , return
+S -> @{ L } , return
+FR -> @for ( A ; B ; F1 F2 , return
+A -> @id = E , return
+9 : 
+D -> type @id ; , for
+D -> type @id ; , id
+D -> type @id ; , if
+D -> type @id ; , type
+D -> type @id ; , while
+D -> type @id ; , {
+10 : 
+M -> void main ( ) { P return @; } , #
+11 : 
+P -> D S @, return
+12 : 
+D -> D type @id ; , for
+D -> D type @id ; , id
+D -> D type @id ; , if
+D -> D type @id ; , type
+D -> D type @id ; , while
+D -> D type @id ; , {
+13 : 
+S -> A @, return
+14 : 
+S -> FR @, return
+15 : 
+S -> if @( B ) { L } , return
+S -> if @( B ) { L } else { L } , return
+16 : 
+S -> while @( B ) { L } , return
+17 : 
+S -> @A , ;
+S -> @A , }
+S -> @FR , ;
+S -> @FR , }
+S -> @if ( B ) { L } , ;
+S -> @if ( B ) { L } , }
+S -> @if ( B ) { L } else { L } , ;
+S -> @if ( B ) { L } else { L } , }
+S -> @while ( B ) { L } , ;
+S -> @while ( B ) { L } , }
+S -> @{ L } , ;
+S -> @{ L } , }
+S -> { @L } , return
+FR -> @for ( A ; B ; F1 F2 , ;
+FR -> @for ( A ; B ; F1 F2 , }
+A -> @id = E , ;
+A -> @id = E , }
+L -> @# , }
+L -> @S , }
+L -> @S ; L , }
+18 : 
+FR -> for @( A ; B ; F1 F2 , return
+19 : 
+A -> id @= E , return
+20 : 
+D -> type id @; , for
+D -> type id @; , id
+D -> type id @; , if
+D -> type id @; , type
+D -> type id @; , while
+D -> type id @; , {
+21 : 
+M -> void main ( ) { P return ; @} , #
+22 : 
+D -> D type id @; , for
+D -> D type id @; , id
+D -> D type id @; , if
+D -> D type id @; , type
+D -> D type id @; , while
+D -> D type id @; , {
+23 : 
+S -> if ( @B ) { L } , return
+S -> if ( @B ) { L } else { L } , return
+B -> @B rel C , )
+B -> @B rel C , rel
+B -> @C , )
+B -> @C , rel
+C -> @id , )
+C -> @id , rel
+C -> @id cmp id , )
+C -> @id cmp id , rel
+C -> @id cmp num , )
+C -> @id cmp num , rel
+24 : 
+S -> while ( @B ) { L } , return
+B -> @B rel C , )
+B -> @B rel C , rel
+B -> @C , )
+B -> @C , rel
+C -> @id , )
+C -> @id , rel
+C -> @id cmp id , )
+C -> @id cmp id , rel
+C -> @id cmp num , )
+C -> @id cmp num , rel
+25 : 
+S -> A @, ;
+S -> A @, }
+26 : 
+S -> FR @, ;
+S -> FR @, }
+27 : 
+S -> if @( B ) { L } , ;
+S -> if @( B ) { L } , }
+S -> if @( B ) { L } else { L } , ;
+S -> if @( B ) { L } else { L } , }
+28 : 
+S -> while @( B ) { L } , ;
+S -> while @( B ) { L } , }
+29 : 
+S -> @A , ;
+S -> @A , }
+S -> @FR , ;
+S -> @FR , }
+S -> @if ( B ) { L } , ;
+S -> @if ( B ) { L } , }
+S -> @if ( B ) { L } else { L } , ;
+S -> @if ( B ) { L } else { L } , }
+S -> @while ( B ) { L } , ;
+S -> @while ( B ) { L } , }
+S -> @{ L } , ;
+S -> @{ L } , }
+S -> { @L } , ;
+S -> { @L } , }
+FR -> @for ( A ; B ; F1 F2 , ;
+FR -> @for ( A ; B ; F1 F2 , }
+A -> @id = E , ;
+A -> @id = E , }
+L -> @# , }
+L -> @S , }
+L -> @S ; L , }
+30 : 
+S -> { L @} , return
+31 : 
+FR -> for @( A ; B ; F1 F2 , ;
+FR -> for @( A ; B ; F1 F2 , }
+32 : 
+A -> id @= E , ;
+A -> id @= E , }
+33 : 
+L -> S @, }
+L -> S @; L , }
+34 : 
+FR -> for ( @A ; B ; F1 F2 , return
+A -> @id = E , ;
+35 : 
+A -> id = @E , return
+E -> @E + T , +
+E -> @E + T , -
+E -> @E + T , return
+E -> @E - T , +
+E -> @E - T , -
+E -> @E - T , return
+E -> @T , +
+E -> @T , -
+E -> @T , return
+T -> @F , *
+T -> @F , +
+T -> @F , -
+T -> @F , /
+T -> @F , return
+T -> @T * F , *
+T -> @T * F , +
+T -> @T * F , -
+T -> @T * F , /
+T -> @T * F , return
+T -> @T / F , *
+T -> @T / F , +
+T -> @T / F , -
+T -> @T / F , /
+T -> @T / F , return
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @( E ) , return
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @id , return
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+F -> @num , return
+36 : 
+D -> type id ; @, for
+D -> type id ; @, id
+D -> type id ; @, if
+D -> type id ; @, type
+D -> type id ; @, while
+D -> type id ; @, {
+37 : 
+M -> void main ( ) { P return ; } @, #
+38 : 
+D -> D type id ; @, for
+D -> D type id ; @, id
+D -> D type id ; @, if
+D -> D type id ; @, type
+D -> D type id ; @, while
+D -> D type id ; @, {
+39 : 
+S -> if ( B @) { L } , return
+S -> if ( B @) { L } else { L } , return
+B -> B @rel C , )
+B -> B @rel C , rel
+40 : 
+B -> C @, )
+B -> C @, rel
+41 : 
+C -> id @, )
+C -> id @, rel
+C -> id @cmp id , )
+C -> id @cmp id , rel
+C -> id @cmp num , )
+C -> id @cmp num , rel
+42 : 
+S -> while ( B @) { L } , return
+B -> B @rel C , )
+B -> B @rel C , rel
+43 : 
+S -> if ( @B ) { L } , ;
+S -> if ( @B ) { L } , }
+S -> if ( @B ) { L } else { L } , ;
+S -> if ( @B ) { L } else { L } , }
+B -> @B rel C , )
+B -> @B rel C , rel
+B -> @C , )
+B -> @C , rel
+C -> @id , )
+C -> @id , rel
+C -> @id cmp id , )
+C -> @id cmp id , rel
+C -> @id cmp num , )
+C -> @id cmp num , rel
+44 : 
+S -> while ( @B ) { L } , ;
+S -> while ( @B ) { L } , }
+B -> @B rel C , )
+B -> @B rel C , rel
+B -> @C , )
+B -> @C , rel
+C -> @id , )
+C -> @id , rel
+C -> @id cmp id , )
+C -> @id cmp id , rel
+C -> @id cmp num , )
+C -> @id cmp num , rel
+45 : 
+S -> { L @} , ;
+S -> { L @} , }
+46 : 
+S -> { L } @, return
+47 : 
+FR -> for ( @A ; B ; F1 F2 , ;
+FR -> for ( @A ; B ; F1 F2 , }
+A -> @id = E , ;
+48 : 
+A -> id = @E , ;
+A -> id = @E , }
+E -> @E + T , +
+E -> @E + T , -
+E -> @E + T , ;
+E -> @E + T , }
+E -> @E - T , +
+E -> @E - T , -
+E -> @E - T , ;
+E -> @E - T , }
+E -> @T , +
+E -> @T , -
+E -> @T , ;
+E -> @T , }
+T -> @F , *
+T -> @F , +
+T -> @F , -
+T -> @F , /
+T -> @F , ;
+T -> @F , }
+T -> @T * F , *
+T -> @T * F , +
+T -> @T * F , -
+T -> @T * F , /
+T -> @T * F , ;
+T -> @T * F , }
+T -> @T / F , *
+T -> @T / F , +
+T -> @T / F , -
+T -> @T / F , /
+T -> @T / F , ;
+T -> @T / F , }
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @( E ) , ;
+F -> @( E ) , }
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @id , ;
+F -> @id , }
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+F -> @num , ;
+F -> @num , }
+49 : 
+S -> @A , ;
+S -> @A , }
+S -> @FR , ;
+S -> @FR , }
+S -> @if ( B ) { L } , ;
+S -> @if ( B ) { L } , }
+S -> @if ( B ) { L } else { L } , ;
+S -> @if ( B ) { L } else { L } , }
+S -> @while ( B ) { L } , ;
+S -> @while ( B ) { L } , }
+S -> @{ L } , ;
+S -> @{ L } , }
+FR -> @for ( A ; B ; F1 F2 , ;
+FR -> @for ( A ; B ; F1 F2 , }
+A -> @id = E , ;
+A -> @id = E , }
+L -> @# , }
+L -> @S , }
+L -> @S ; L , }
+L -> S ; @L , }
+50 : 
+FR -> for ( A @; B ; F1 F2 , return
+51 : 
+A -> id @= E , ;
+52 : 
+A -> id = E @, return
+E -> E @+ T , +
+E -> E @+ T , -
+E -> E @+ T , return
+E -> E @- T , +
+E -> E @- T , -
+E -> E @- T , return
+53 : 
+E -> T @, +
+E -> T @, -
+E -> T @, return
+T -> T @* F , *
+T -> T @* F , +
+T -> T @* F , -
+T -> T @* F , /
+T -> T @* F , return
+T -> T @/ F , *
+T -> T @/ F , +
+T -> T @/ F , -
+T -> T @/ F , /
+T -> T @/ F , return
+54 : 
+T -> F @, *
+T -> F @, +
+T -> F @, -
+T -> F @, /
+T -> F @, return
+55 : 
+E -> @E + T , )
+E -> @E + T , +
+E -> @E + T , -
+E -> @E - T , )
+E -> @E - T , +
+E -> @E - T , -
+E -> @T , )
+E -> @T , +
+E -> @T , -
+T -> @F , )
+T -> @F , *
+T -> @F , +
+T -> @F , -
+T -> @F , /
+T -> @T * F , )
+T -> @T * F , *
+T -> @T * F , +
+T -> @T * F , -
+T -> @T * F , /
+T -> @T / F , )
+T -> @T / F , *
+T -> @T / F , +
+T -> @T / F , -
+T -> @T / F , /
+F -> @( E ) , )
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> ( @E ) , *
+F -> ( @E ) , +
+F -> ( @E ) , -
+F -> ( @E ) , /
+F -> ( @E ) , return
+F -> @id , )
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @num , )
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+56 : 
+F -> id @, *
+F -> id @, +
+F -> id @, -
+F -> id @, /
+F -> id @, return
+57 : 
+F -> num @, *
+F -> num @, +
+F -> num @, -
+F -> num @, /
+F -> num @, return
+58 : 
+S -> if ( B ) @{ L } , return
+S -> if ( B ) @{ L } else { L } , return
+59 : 
+B -> B rel @C , )
+B -> B rel @C , rel
+C -> @id , )
+C -> @id , rel
+C -> @id cmp id , )
+C -> @id cmp id , rel
+C -> @id cmp num , )
+C -> @id cmp num , rel
+60 : 
+C -> id cmp @id , )
+C -> id cmp @id , rel
+C -> id cmp @num , )
+C -> id cmp @num , rel
+61 : 
+S -> while ( B ) @{ L } , return
+62 : 
+S -> if ( B @) { L } , ;
+S -> if ( B @) { L } , }
+S -> if ( B @) { L } else { L } , ;
+S -> if ( B @) { L } else { L } , }
+B -> B @rel C , )
+B -> B @rel C , rel
+63 : 
+S -> while ( B @) { L } , ;
+S -> while ( B @) { L } , }
+B -> B @rel C , )
+B -> B @rel C , rel
+64 : 
+S -> { L } @, ;
+S -> { L } @, }
+65 : 
+FR -> for ( A @; B ; F1 F2 , ;
+FR -> for ( A @; B ; F1 F2 , }
+66 : 
+A -> id = E @, ;
+A -> id = E @, }
+E -> E @+ T , +
+E -> E @+ T , -
+E -> E @+ T , ;
+E -> E @+ T , }
+E -> E @- T , +
+E -> E @- T , -
+E -> E @- T , ;
+E -> E @- T , }
+67 : 
+E -> T @, +
+E -> T @, -
+E -> T @, ;
+E -> T @, }
+T -> T @* F , *
+T -> T @* F , +
+T -> T @* F , -
+T -> T @* F , /
+T -> T @* F , ;
+T -> T @* F , }
+T -> T @/ F , *
+T -> T @/ F , +
+T -> T @/ F , -
+T -> T @/ F , /
+T -> T @/ F , ;
+T -> T @/ F , }
+68 : 
+T -> F @, *
+T -> F @, +
+T -> F @, -
+T -> F @, /
+T -> F @, ;
+T -> F @, }
+69 : 
+E -> @E + T , )
+E -> @E + T , +
+E -> @E + T , -
+E -> @E - T , )
+E -> @E - T , +
+E -> @E - T , -
+E -> @T , )
+E -> @T , +
+E -> @T , -
+T -> @F , )
+T -> @F , *
+T -> @F , +
+T -> @F , -
+T -> @F , /
+T -> @T * F , )
+T -> @T * F , *
+T -> @T * F , +
+T -> @T * F , -
+T -> @T * F , /
+T -> @T / F , )
+T -> @T / F , *
+T -> @T / F , +
+T -> @T / F , -
+T -> @T / F , /
+F -> @( E ) , )
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> ( @E ) , *
+F -> ( @E ) , +
+F -> ( @E ) , -
+F -> ( @E ) , /
+F -> ( @E ) , ;
+F -> ( @E ) , }
+F -> @id , )
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @num , )
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+70 : 
+F -> id @, *
+F -> id @, +
+F -> id @, -
+F -> id @, /
+F -> id @, ;
+F -> id @, }
+71 : 
+F -> num @, *
+F -> num @, +
+F -> num @, -
+F -> num @, /
+F -> num @, ;
+F -> num @, }
+72 : 
+L -> S ; L @, }
+73 : 
+FR -> for ( A ; @B ; F1 F2 , return
+B -> @B rel C , ;
+B -> @B rel C , rel
+B -> @C , ;
+B -> @C , rel
+C -> @id , ;
+C -> @id , rel
+C -> @id cmp id , ;
+C -> @id cmp id , rel
+C -> @id cmp num , ;
+C -> @id cmp num , rel
+74 : 
+A -> id = @E , ;
+E -> @E + T , +
+E -> @E + T , -
+E -> @E + T , ;
+E -> @E - T , +
+E -> @E - T , -
+E -> @E - T , ;
+E -> @T , +
+E -> @T , -
+E -> @T , ;
+T -> @F , *
+T -> @F , +
+T -> @F , -
+T -> @F , /
+T -> @F , ;
+T -> @T * F , *
+T -> @T * F , +
+T -> @T * F , -
+T -> @T * F , /
+T -> @T * F , ;
+T -> @T / F , *
+T -> @T / F , +
+T -> @T / F , -
+T -> @T / F , /
+T -> @T / F , ;
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @( E ) , ;
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @id , ;
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+F -> @num , ;
+75 : 
+E -> E + @T , +
+E -> E + @T , -
+E -> E + @T , return
+T -> @F , *
+T -> @F , +
+T -> @F , -
+T -> @F , /
+T -> @F , return
+T -> @T * F , *
+T -> @T * F , +
+T -> @T * F , -
+T -> @T * F , /
+T -> @T * F , return
+T -> @T / F , *
+T -> @T / F , +
+T -> @T / F , -
+T -> @T / F , /
+T -> @T / F , return
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @( E ) , return
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @id , return
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+F -> @num , return
+76 : 
+E -> E - @T , +
+E -> E - @T , -
+E -> E - @T , return
+T -> @F , *
+T -> @F , +
+T -> @F , -
+T -> @F , /
+T -> @F , return
+T -> @T * F , *
+T -> @T * F , +
+T -> @T * F , -
+T -> @T * F , /
+T -> @T * F , return
+T -> @T / F , *
+T -> @T / F , +
+T -> @T / F , -
+T -> @T / F , /
+T -> @T / F , return
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @( E ) , return
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @id , return
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+F -> @num , return
+77 : 
+T -> T * @F , *
+T -> T * @F , +
+T -> T * @F , -
+T -> T * @F , /
+T -> T * @F , return
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @( E ) , return
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @id , return
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+F -> @num , return
+78 : 
+T -> T / @F , *
+T -> T / @F , +
+T -> T / @F , -
+T -> T / @F , /
+T -> T / @F , return
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @( E ) , return
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @id , return
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+F -> @num , return
+79 : 
+E -> E @+ T , )
+E -> E @+ T , +
+E -> E @+ T , -
+E -> E @- T , )
+E -> E @- T , +
+E -> E @- T , -
+F -> ( E @) , *
+F -> ( E @) , +
+F -> ( E @) , -
+F -> ( E @) , /
+F -> ( E @) , return
+80 : 
+E -> T @, )
+E -> T @, +
+E -> T @, -
+T -> T @* F , )
+T -> T @* F , *
+T -> T @* F , +
+T -> T @* F , -
+T -> T @* F , /
+T -> T @/ F , )
+T -> T @/ F , *
+T -> T @/ F , +
+T -> T @/ F , -
+T -> T @/ F , /
+81 : 
+T -> F @, )
+T -> F @, *
+T -> F @, +
+T -> F @, -
+T -> F @, /
+82 : 
+E -> @E + T , )
+E -> @E + T , +
+E -> @E + T , -
+E -> @E - T , )
+E -> @E - T , +
+E -> @E - T , -
+E -> @T , )
+E -> @T , +
+E -> @T , -
+T -> @F , )
+T -> @F , *
+T -> @F , +
+T -> @F , -
+T -> @F , /
+T -> @T * F , )
+T -> @T * F , *
+T -> @T * F , +
+T -> @T * F , -
+T -> @T * F , /
+T -> @T / F , )
+T -> @T / F , *
+T -> @T / F , +
+T -> @T / F , -
+T -> @T / F , /
+F -> @( E ) , )
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> ( @E ) , )
+F -> ( @E ) , *
+F -> ( @E ) , +
+F -> ( @E ) , -
+F -> ( @E ) , /
+F -> @id , )
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @num , )
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+83 : 
+F -> id @, )
+F -> id @, *
+F -> id @, +
+F -> id @, -
+F -> id @, /
+84 : 
+F -> num @, )
+F -> num @, *
+F -> num @, +
+F -> num @, -
+F -> num @, /
+85 : 
+S -> @A , ;
+S -> @A , }
+S -> @FR , ;
+S -> @FR , }
+S -> @if ( B ) { L } , ;
+S -> @if ( B ) { L } , }
+S -> if ( B ) { @L } , return
+S -> @if ( B ) { L } else { L } , ;
+S -> @if ( B ) { L } else { L } , }
+S -> if ( B ) { @L } else { L } , return
+S -> @while ( B ) { L } , ;
+S -> @while ( B ) { L } , }
+S -> @{ L } , ;
+S -> @{ L } , }
+FR -> @for ( A ; B ; F1 F2 , ;
+FR -> @for ( A ; B ; F1 F2 , }
+A -> @id = E , ;
+A -> @id = E , }
+L -> @# , }
+L -> @S , }
+L -> @S ; L , }
+86 : 
+B -> B rel C @, )
+B -> B rel C @, rel
+87 : 
+C -> id cmp id @, )
+C -> id cmp id @, rel
+88 : 
+C -> id cmp num @, )
+C -> id cmp num @, rel
+89 : 
+S -> @A , ;
+S -> @A , }
+S -> @FR , ;
+S -> @FR , }
+S -> @if ( B ) { L } , ;
+S -> @if ( B ) { L } , }
+S -> @if ( B ) { L } else { L } , ;
+S -> @if ( B ) { L } else { L } , }
+S -> @while ( B ) { L } , ;
+S -> @while ( B ) { L } , }
+S -> while ( B ) { @L } , return
+S -> @{ L } , ;
+S -> @{ L } , }
+FR -> @for ( A ; B ; F1 F2 , ;
+FR -> @for ( A ; B ; F1 F2 , }
+A -> @id = E , ;
+A -> @id = E , }
+L -> @# , }
+L -> @S , }
+L -> @S ; L , }
+90 : 
+S -> if ( B ) @{ L } , ;
+S -> if ( B ) @{ L } , }
+S -> if ( B ) @{ L } else { L } , ;
+S -> if ( B ) @{ L } else { L } , }
+91 : 
+S -> while ( B ) @{ L } , ;
+S -> while ( B ) @{ L } , }
+92 : 
+FR -> for ( A ; @B ; F1 F2 , ;
+FR -> for ( A ; @B ; F1 F2 , }
+B -> @B rel C , ;
+B -> @B rel C , rel
+B -> @C , ;
+B -> @C , rel
+C -> @id , ;
+C -> @id , rel
+C -> @id cmp id , ;
+C -> @id cmp id , rel
+C -> @id cmp num , ;
+C -> @id cmp num , rel
+93 : 
+E -> E + @T , +
+E -> E + @T , -
+E -> E + @T , ;
+E -> E + @T , }
+T -> @F , *
+T -> @F , +
+T -> @F , -
+T -> @F , /
+T -> @F , ;
+T -> @F , }
+T -> @T * F , *
+T -> @T * F , +
+T -> @T * F , -
+T -> @T * F , /
+T -> @T * F , ;
+T -> @T * F , }
+T -> @T / F , *
+T -> @T / F , +
+T -> @T / F , -
+T -> @T / F , /
+T -> @T / F , ;
+T -> @T / F , }
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @( E ) , ;
+F -> @( E ) , }
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @id , ;
+F -> @id , }
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+F -> @num , ;
+F -> @num , }
+94 : 
+E -> E - @T , +
+E -> E - @T , -
+E -> E - @T , ;
+E -> E - @T , }
+T -> @F , *
+T -> @F , +
+T -> @F , -
+T -> @F , /
+T -> @F , ;
+T -> @F , }
+T -> @T * F , *
+T -> @T * F , +
+T -> @T * F , -
+T -> @T * F , /
+T -> @T * F , ;
+T -> @T * F , }
+T -> @T / F , *
+T -> @T / F , +
+T -> @T / F , -
+T -> @T / F , /
+T -> @T / F , ;
+T -> @T / F , }
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @( E ) , ;
+F -> @( E ) , }
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @id , ;
+F -> @id , }
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+F -> @num , ;
+F -> @num , }
+95 : 
+T -> T * @F , *
+T -> T * @F , +
+T -> T * @F , -
+T -> T * @F , /
+T -> T * @F , ;
+T -> T * @F , }
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @( E ) , ;
+F -> @( E ) , }
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @id , ;
+F -> @id , }
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+F -> @num , ;
+F -> @num , }
+96 : 
+T -> T / @F , *
+T -> T / @F , +
+T -> T / @F , -
+T -> T / @F , /
+T -> T / @F , ;
+T -> T / @F , }
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @( E ) , ;
+F -> @( E ) , }
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @id , ;
+F -> @id , }
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+F -> @num , ;
+F -> @num , }
+97 : 
+E -> E @+ T , )
+E -> E @+ T , +
+E -> E @+ T , -
+E -> E @- T , )
+E -> E @- T , +
+E -> E @- T , -
+F -> ( E @) , *
+F -> ( E @) , +
+F -> ( E @) , -
+F -> ( E @) , /
+F -> ( E @) , ;
+F -> ( E @) , }
+98 : 
+FR -> for ( A ; B @; F1 F2 , return
+B -> B @rel C , ;
+B -> B @rel C , rel
+99 : 
+B -> C @, ;
+B -> C @, rel
+100 : 
+C -> id @, ;
+C -> id @, rel
+C -> id @cmp id , ;
+C -> id @cmp id , rel
+C -> id @cmp num , ;
+C -> id @cmp num , rel
+101 : 
+A -> id = E @, ;
+E -> E @+ T , +
+E -> E @+ T , -
+E -> E @+ T , ;
+E -> E @- T , +
+E -> E @- T , -
+E -> E @- T , ;
+102 : 
+E -> T @, +
+E -> T @, -
+E -> T @, ;
+T -> T @* F , *
+T -> T @* F , +
+T -> T @* F , -
+T -> T @* F , /
+T -> T @* F , ;
+T -> T @/ F , *
+T -> T @/ F , +
+T -> T @/ F , -
+T -> T @/ F , /
+T -> T @/ F , ;
+103 : 
+T -> F @, *
+T -> F @, +
+T -> F @, -
+T -> F @, /
+T -> F @, ;
+104 : 
+E -> @E + T , )
+E -> @E + T , +
+E -> @E + T , -
+E -> @E - T , )
+E -> @E - T , +
+E -> @E - T , -
+E -> @T , )
+E -> @T , +
+E -> @T , -
+T -> @F , )
+T -> @F , *
+T -> @F , +
+T -> @F , -
+T -> @F , /
+T -> @T * F , )
+T -> @T * F , *
+T -> @T * F , +
+T -> @T * F , -
+T -> @T * F , /
+T -> @T / F , )
+T -> @T / F , *
+T -> @T / F , +
+T -> @T / F , -
+T -> @T / F , /
+F -> @( E ) , )
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> ( @E ) , *
+F -> ( @E ) , +
+F -> ( @E ) , -
+F -> ( @E ) , /
+F -> ( @E ) , ;
+F -> @id , )
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @num , )
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+105 : 
+F -> id @, *
+F -> id @, +
+F -> id @, -
+F -> id @, /
+F -> id @, ;
+106 : 
+F -> num @, *
+F -> num @, +
+F -> num @, -
+F -> num @, /
+F -> num @, ;
+107 : 
+E -> E + T @, +
+E -> E + T @, -
+E -> E + T @, return
+T -> T @* F , *
+T -> T @* F , +
+T -> T @* F , -
+T -> T @* F , /
+T -> T @* F , return
+T -> T @/ F , *
+T -> T @/ F , +
+T -> T @/ F , -
+T -> T @/ F , /
+T -> T @/ F , return
+108 : 
+E -> E - T @, +
+E -> E - T @, -
+E -> E - T @, return
+T -> T @* F , *
+T -> T @* F , +
+T -> T @* F , -
+T -> T @* F , /
+T -> T @* F , return
+T -> T @/ F , *
+T -> T @/ F , +
+T -> T @/ F , -
+T -> T @/ F , /
+T -> T @/ F , return
+109 : 
+T -> T * F @, *
+T -> T * F @, +
+T -> T * F @, -
+T -> T * F @, /
+T -> T * F @, return
+110 : 
+T -> T / F @, *
+T -> T / F @, +
+T -> T / F @, -
+T -> T / F @, /
+T -> T / F @, return
+111 : 
+E -> E + @T , )
+E -> E + @T , +
+E -> E + @T , -
+T -> @F , )
+T -> @F , *
+T -> @F , +
+T -> @F , -
+T -> @F , /
+T -> @T * F , )
+T -> @T * F , *
+T -> @T * F , +
+T -> @T * F , -
+T -> @T * F , /
+T -> @T / F , )
+T -> @T / F , *
+T -> @T / F , +
+T -> @T / F , -
+T -> @T / F , /
+F -> @( E ) , )
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @id , )
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @num , )
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+112 : 
+E -> E - @T , )
+E -> E - @T , +
+E -> E - @T , -
+T -> @F , )
+T -> @F , *
+T -> @F , +
+T -> @F , -
+T -> @F , /
+T -> @T * F , )
+T -> @T * F , *
+T -> @T * F , +
+T -> @T * F , -
+T -> @T * F , /
+T -> @T / F , )
+T -> @T / F , *
+T -> @T / F , +
+T -> @T / F , -
+T -> @T / F , /
+F -> @( E ) , )
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @id , )
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @num , )
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+113 : 
+F -> ( E ) @, *
+F -> ( E ) @, +
+F -> ( E ) @, -
+F -> ( E ) @, /
+F -> ( E ) @, return
+114 : 
+T -> T * @F , )
+T -> T * @F , *
+T -> T * @F , +
+T -> T * @F , -
+T -> T * @F , /
+F -> @( E ) , )
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @id , )
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @num , )
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+115 : 
+T -> T / @F , )
+T -> T / @F , *
+T -> T / @F , +
+T -> T / @F , -
+T -> T / @F , /
+F -> @( E ) , )
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @id , )
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @num , )
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+116 : 
+E -> E @+ T , )
+E -> E @+ T , +
+E -> E @+ T , -
+E -> E @- T , )
+E -> E @- T , +
+E -> E @- T , -
+F -> ( E @) , )
+F -> ( E @) , *
+F -> ( E @) , +
+F -> ( E @) , -
+F -> ( E @) , /
+117 : 
+S -> if ( B ) { L @} , return
+S -> if ( B ) { L @} else { L } , return
+118 : 
+S -> while ( B ) { L @} , return
+119 : 
+S -> @A , ;
+S -> @A , }
+S -> @FR , ;
+S -> @FR , }
+S -> @if ( B ) { L } , ;
+S -> @if ( B ) { L } , }
+S -> if ( B ) { @L } , ;
+S -> if ( B ) { @L } , }
+S -> @if ( B ) { L } else { L } , ;
+S -> @if ( B ) { L } else { L } , }
+S -> if ( B ) { @L } else { L } , ;
+S -> if ( B ) { @L } else { L } , }
+S -> @while ( B ) { L } , ;
+S -> @while ( B ) { L } , }
+S -> @{ L } , ;
+S -> @{ L } , }
+FR -> @for ( A ; B ; F1 F2 , ;
+FR -> @for ( A ; B ; F1 F2 , }
+A -> @id = E , ;
+A -> @id = E , }
+L -> @# , }
+L -> @S , }
+L -> @S ; L , }
+120 : 
+S -> @A , ;
+S -> @A , }
+S -> @FR , ;
+S -> @FR , }
+S -> @if ( B ) { L } , ;
+S -> @if ( B ) { L } , }
+S -> @if ( B ) { L } else { L } , ;
+S -> @if ( B ) { L } else { L } , }
+S -> @while ( B ) { L } , ;
+S -> @while ( B ) { L } , }
+S -> while ( B ) { @L } , ;
+S -> while ( B ) { @L } , }
+S -> @{ L } , ;
+S -> @{ L } , }
+FR -> @for ( A ; B ; F1 F2 , ;
+FR -> @for ( A ; B ; F1 F2 , }
+A -> @id = E , ;
+A -> @id = E , }
+L -> @# , }
+L -> @S , }
+L -> @S ; L , }
+121 : 
+FR -> for ( A ; B @; F1 F2 , ;
+FR -> for ( A ; B @; F1 F2 , }
+B -> B @rel C , ;
+B -> B @rel C , rel
+122 : 
+E -> E + T @, +
+E -> E + T @, -
+E -> E + T @, ;
+E -> E + T @, }
+T -> T @* F , *
+T -> T @* F , +
+T -> T @* F , -
+T -> T @* F , /
+T -> T @* F , ;
+T -> T @* F , }
+T -> T @/ F , *
+T -> T @/ F , +
+T -> T @/ F , -
+T -> T @/ F , /
+T -> T @/ F , ;
+T -> T @/ F , }
+123 : 
+E -> E - T @, +
+E -> E - T @, -
+E -> E - T @, ;
+E -> E - T @, }
+T -> T @* F , *
+T -> T @* F , +
+T -> T @* F , -
+T -> T @* F , /
+T -> T @* F , ;
+T -> T @* F , }
+T -> T @/ F , *
+T -> T @/ F , +
+T -> T @/ F , -
+T -> T @/ F , /
+T -> T @/ F , ;
+T -> T @/ F , }
+124 : 
+T -> T * F @, *
+T -> T * F @, +
+T -> T * F @, -
+T -> T * F @, /
+T -> T * F @, ;
+T -> T * F @, }
+125 : 
+T -> T / F @, *
+T -> T / F @, +
+T -> T / F @, -
+T -> T / F @, /
+T -> T / F @, ;
+T -> T / F @, }
+126 : 
+F -> ( E ) @, *
+F -> ( E ) @, +
+F -> ( E ) @, -
+F -> ( E ) @, /
+F -> ( E ) @, ;
+F -> ( E ) @, }
+127 : 
+FR -> for ( A ; B ; @F1 F2 , return
+F1 -> @A ) { , for
+F1 -> @A ) { , id
+F1 -> @A ) { , if
+F1 -> @A ) { , while
+F1 -> @A ) { , {
+F1 -> @A ) { , }
+A -> @id = E , )
+128 : 
+B -> B rel @C , ;
+B -> B rel @C , rel
+C -> @id , ;
+C -> @id , rel
+C -> @id cmp id , ;
+C -> @id cmp id , rel
+C -> @id cmp num , ;
+C -> @id cmp num , rel
+129 : 
+C -> id cmp @id , ;
+C -> id cmp @id , rel
+C -> id cmp @num , ;
+C -> id cmp @num , rel
+130 : 
+E -> E + @T , +
+E -> E + @T , -
+E -> E + @T , ;
+T -> @F , *
+T -> @F , +
+T -> @F , -
+T -> @F , /
+T -> @F , ;
+T -> @T * F , *
+T -> @T * F , +
+T -> @T * F , -
+T -> @T * F , /
+T -> @T * F , ;
+T -> @T / F , *
+T -> @T / F , +
+T -> @T / F , -
+T -> @T / F , /
+T -> @T / F , ;
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @( E ) , ;
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @id , ;
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+F -> @num , ;
+131 : 
+E -> E - @T , +
+E -> E - @T , -
+E -> E - @T , ;
+T -> @F , *
+T -> @F , +
+T -> @F , -
+T -> @F , /
+T -> @F , ;
+T -> @T * F , *
+T -> @T * F , +
+T -> @T * F , -
+T -> @T * F , /
+T -> @T * F , ;
+T -> @T / F , *
+T -> @T / F , +
+T -> @T / F , -
+T -> @T / F , /
+T -> @T / F , ;
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @( E ) , ;
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @id , ;
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+F -> @num , ;
+132 : 
+T -> T * @F , *
+T -> T * @F , +
+T -> T * @F , -
+T -> T * @F , /
+T -> T * @F , ;
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @( E ) , ;
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @id , ;
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+F -> @num , ;
+133 : 
+T -> T / @F , *
+T -> T / @F , +
+T -> T / @F , -
+T -> T / @F , /
+T -> T / @F , ;
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @( E ) , ;
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @id , ;
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+F -> @num , ;
+134 : 
+E -> E @+ T , )
+E -> E @+ T , +
+E -> E @+ T , -
+E -> E @- T , )
+E -> E @- T , +
+E -> E @- T , -
+F -> ( E @) , *
+F -> ( E @) , +
+F -> ( E @) , -
+F -> ( E @) , /
+F -> ( E @) , ;
+135 : 
+E -> E + T @, )
+E -> E + T @, +
+E -> E + T @, -
+T -> T @* F , )
+T -> T @* F , *
+T -> T @* F , +
+T -> T @* F , -
+T -> T @* F , /
+T -> T @/ F , )
+T -> T @/ F , *
+T -> T @/ F , +
+T -> T @/ F , -
+T -> T @/ F , /
+136 : 
+E -> E - T @, )
+E -> E - T @, +
+E -> E - T @, -
+T -> T @* F , )
+T -> T @* F , *
+T -> T @* F , +
+T -> T @* F , -
+T -> T @* F , /
+T -> T @/ F , )
+T -> T @/ F , *
+T -> T @/ F , +
+T -> T @/ F , -
+T -> T @/ F , /
+137 : 
+T -> T * F @, )
+T -> T * F @, *
+T -> T * F @, +
+T -> T * F @, -
+T -> T * F @, /
+138 : 
+T -> T / F @, )
+T -> T / F @, *
+T -> T / F @, +
+T -> T / F @, -
+T -> T / F @, /
+139 : 
+F -> ( E ) @, )
+F -> ( E ) @, *
+F -> ( E ) @, +
+F -> ( E ) @, -
+F -> ( E ) @, /
+140 : 
+S -> if ( B ) { L } @, return
+S -> if ( B ) { L } @else { L } , return
+141 : 
+S -> while ( B ) { L } @, return
+142 : 
+S -> if ( B ) { L @} , ;
+S -> if ( B ) { L @} , }
+S -> if ( B ) { L @} else { L } , ;
+S -> if ( B ) { L @} else { L } , }
+143 : 
+S -> while ( B ) { L @} , ;
+S -> while ( B ) { L @} , }
+144 : 
+FR -> for ( A ; B ; @F1 F2 , ;
+FR -> for ( A ; B ; @F1 F2 , }
+F1 -> @A ) { , for
+F1 -> @A ) { , id
+F1 -> @A ) { , if
+F1 -> @A ) { , while
+F1 -> @A ) { , {
+F1 -> @A ) { , }
+A -> @id = E , )
+145 : 
+S -> @A , ;
+S -> @A , }
+S -> @FR , ;
+S -> @FR , }
+S -> @if ( B ) { L } , ;
+S -> @if ( B ) { L } , }
+S -> @if ( B ) { L } else { L } , ;
+S -> @if ( B ) { L } else { L } , }
+S -> @while ( B ) { L } , ;
+S -> @while ( B ) { L } , }
+S -> @{ L } , ;
+S -> @{ L } , }
+FR -> @for ( A ; B ; F1 F2 , ;
+FR -> @for ( A ; B ; F1 F2 , }
+FR -> for ( A ; B ; F1 @F2 , return
+F2 -> @L } , return
+A -> @id = E , ;
+A -> @id = E , }
+L -> @# , }
+L -> @S , }
+L -> @S ; L , }
+146 : 
+F1 -> A @) { , for
+F1 -> A @) { , id
+F1 -> A @) { , if
+F1 -> A @) { , while
+F1 -> A @) { , {
+F1 -> A @) { , }
+147 : 
+A -> id @= E , )
+148 : 
+B -> B rel C @, ;
+B -> B rel C @, rel
+149 : 
+C -> id cmp id @, ;
+C -> id cmp id @, rel
+150 : 
+C -> id cmp num @, ;
+C -> id cmp num @, rel
+151 : 
+E -> E + T @, +
+E -> E + T @, -
+E -> E + T @, ;
+T -> T @* F , *
+T -> T @* F , +
+T -> T @* F , -
+T -> T @* F , /
+T -> T @* F , ;
+T -> T @/ F , *
+T -> T @/ F , +
+T -> T @/ F , -
+T -> T @/ F , /
+T -> T @/ F , ;
+152 : 
+E -> E - T @, +
+E -> E - T @, -
+E -> E - T @, ;
+T -> T @* F , *
+T -> T @* F , +
+T -> T @* F , -
+T -> T @* F , /
+T -> T @* F , ;
+T -> T @/ F , *
+T -> T @/ F , +
+T -> T @/ F , -
+T -> T @/ F , /
+T -> T @/ F , ;
+153 : 
+T -> T * F @, *
+T -> T * F @, +
+T -> T * F @, -
+T -> T * F @, /
+T -> T * F @, ;
+154 : 
+T -> T / F @, *
+T -> T / F @, +
+T -> T / F @, -
+T -> T / F @, /
+T -> T / F @, ;
+155 : 
+F -> ( E ) @, *
+F -> ( E ) @, +
+F -> ( E ) @, -
+F -> ( E ) @, /
+F -> ( E ) @, ;
+156 : 
+S -> if ( B ) { L } else @{ L } , return
+157 : 
+S -> if ( B ) { L } @, ;
+S -> if ( B ) { L } @, }
+S -> if ( B ) { L } @else { L } , ;
+S -> if ( B ) { L } @else { L } , }
+158 : 
+S -> while ( B ) { L } @, ;
+S -> while ( B ) { L } @, }
+159 : 
+S -> @A , ;
+S -> @A , }
+S -> @FR , ;
+S -> @FR , }
+S -> @if ( B ) { L } , ;
+S -> @if ( B ) { L } , }
+S -> @if ( B ) { L } else { L } , ;
+S -> @if ( B ) { L } else { L } , }
+S -> @while ( B ) { L } , ;
+S -> @while ( B ) { L } , }
+S -> @{ L } , ;
+S -> @{ L } , }
+FR -> @for ( A ; B ; F1 F2 , ;
+FR -> @for ( A ; B ; F1 F2 , }
+FR -> for ( A ; B ; F1 @F2 , ;
+FR -> for ( A ; B ; F1 @F2 , }
+F2 -> @L } , ;
+F2 -> @L } , }
+A -> @id = E , ;
+A -> @id = E , }
+L -> @# , }
+L -> @S , }
+L -> @S ; L , }
+160 : 
+FR -> for ( A ; B ; F1 F2 @, return
+161 : 
+F2 -> L @} , return
+162 : 
+F1 -> A ) @{ , for
+F1 -> A ) @{ , id
+F1 -> A ) @{ , if
+F1 -> A ) @{ , while
+F1 -> A ) @{ , {
+F1 -> A ) @{ , }
+163 : 
+A -> id = @E , )
+E -> @E + T , )
+E -> @E + T , +
+E -> @E + T , -
+E -> @E - T , )
+E -> @E - T , +
+E -> @E - T , -
+E -> @T , )
+E -> @T , +
+E -> @T , -
+T -> @F , )
+T -> @F , *
+T -> @F , +
+T -> @F , -
+T -> @F , /
+T -> @T * F , )
+T -> @T * F , *
+T -> @T * F , +
+T -> @T * F , -
+T -> @T * F , /
+T -> @T / F , )
+T -> @T / F , *
+T -> @T / F , +
+T -> @T / F , -
+T -> @T / F , /
+F -> @( E ) , )
+F -> @( E ) , *
+F -> @( E ) , +
+F -> @( E ) , -
+F -> @( E ) , /
+F -> @id , )
+F -> @id , *
+F -> @id , +
+F -> @id , -
+F -> @id , /
+F -> @num , )
+F -> @num , *
+F -> @num , +
+F -> @num , -
+F -> @num , /
+164 : 
+S -> @A , ;
+S -> @A , }
+S -> @FR , ;
+S -> @FR , }
+S -> @if ( B ) { L } , ;
+S -> @if ( B ) { L } , }
+S -> @if ( B ) { L } else { L } , ;
+S -> @if ( B ) { L } else { L } , }
+S -> if ( B ) { L } else { @L } , return
+S -> @while ( B ) { L } , ;
+S -> @while ( B ) { L } , }
+S -> @{ L } , ;
+S -> @{ L } , }
+FR -> @for ( A ; B ; F1 F2 , ;
+FR -> @for ( A ; B ; F1 F2 , }
+A -> @id = E , ;
+A -> @id = E , }
+L -> @# , }
+L -> @S , }
+L -> @S ; L , }
+165 : 
+S -> if ( B ) { L } else @{ L } , ;
+S -> if ( B ) { L } else @{ L } , }
+166 : 
+FR -> for ( A ; B ; F1 F2 @, ;
+FR -> for ( A ; B ; F1 F2 @, }
+167 : 
+F2 -> L @} , ;
+F2 -> L @} , }
+168 : 
+F2 -> L } @, return
+169 : 
+F1 -> A ) { @, for
+F1 -> A ) { @, id
+F1 -> A ) { @, if
+F1 -> A ) { @, while
+F1 -> A ) { @, {
+F1 -> A ) { @, }
+170 : 
+A -> id = E @, )
+E -> E @+ T , )
+E -> E @+ T , +
+E -> E @+ T , -
+E -> E @- T , )
+E -> E @- T , +
+E -> E @- T , -
+171 : 
+S -> if ( B ) { L } else { L @} , return
+172 : 
+S -> @A , ;
+S -> @A , }
+S -> @FR , ;
+S -> @FR , }
+S -> @if ( B ) { L } , ;
+S -> @if ( B ) { L } , }
+S -> @if ( B ) { L } else { L } , ;
+S -> @if ( B ) { L } else { L } , }
+S -> if ( B ) { L } else { @L } , ;
+S -> if ( B ) { L } else { @L } , }
+S -> @while ( B ) { L } , ;
+S -> @while ( B ) { L } , }
+S -> @{ L } , ;
+S -> @{ L } , }
+FR -> @for ( A ; B ; F1 F2 , ;
+FR -> @for ( A ; B ; F1 F2 , }
+A -> @id = E , ;
+A -> @id = E , }
+L -> @# , }
+L -> @S , }
+L -> @S ; L , }
+173 : 
+F2 -> L } @, ;
+F2 -> L } @, }
+174 : 
+S -> if ( B ) { L } else { L } @, return
+175 : 
+S -> if ( B ) { L } else { L @} , ;
+S -> if ( B ) { L } else { L @} , }
+176 : 
+S -> if ( B ) { L } else { L } @, ;
+S -> if ( B ) { L } else { L } @, }
