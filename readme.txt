@@ -7,9 +7,10 @@
     判断字符串是否合法, 生成语法树
 语义分析         √
 中间代码生成      √   
-    生成三元式或者四元式
+    生成四元式
 中间代码解释器＊   未写
 
+语义分析同时生成四元式有bug
 
 Compiler
 Lexer              √
@@ -20,7 +21,7 @@ Parser             √
 Semantic analysis  √
     (Syntax-directed translation)
 Code generation    √
-    Tree or four configurations sequences
+     quaternion
 Code optimization * not write
 
 搭建了网页的用户界面
